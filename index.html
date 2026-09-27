@@ -30,7 +30,7 @@ a{color:inherit;text-decoration:none}
 ::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:linear-gradient(#22d3ee,#a78bfa);border-radius:8px}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 22px}
-section{padding:96px 0;position:relative}
+section{padding:96px 0;position:relative;scroll-margin-top:60px}
 .eyebrow{display:inline-block;font-size:12px;letter-spacing:4px;text-transform:uppercase;color:var(--cyan);
   border:1px solid rgba(34,211,238,.35);padding:6px 16px;border-radius:100px;margin-bottom:18px;background:rgba(34,211,238,.06)}
 .sec-title{font-size:clamp(28px,4.5vw,44px);margin-bottom:12px}
@@ -201,6 +201,15 @@ body:not(.anim) .bar i{width:var(--w)}
 .mock-chips em{font-style:normal;font-size:11.5px;padding:5px 12px;border-radius:100px;background:rgba(34,211,238,.14);color:var(--cyan)}
 .more-card{margin-top:22px;text-align:center;border:1.5px dashed rgba(255,255,255,.2);border-radius:var(--radius);padding:38px 24px}
 .more-card p{color:var(--muted);margin-bottom:18px}
+
+/* ============ PROJECT EXTRAS ============ */
+.demo-note{display:inline-flex;align-items:center;gap:8px;font-size:13.5px;color:var(--muted);
+  background:rgba(251,191,36,.07);border:1px solid rgba(251,191,36,.3);padding:9px 18px;border-radius:100px;margin:0 0 34px}
+.live-dot{display:inline-flex;align-items:center;gap:7px;font-size:12px;font-weight:700;color:var(--green);
+  background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.35);padding:5px 14px;border-radius:100px;margin-bottom:12px}
+.live-dot i{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 1.8s infinite;font-style:normal}
+.proj-btns{display:flex;gap:14px;flex-wrap:wrap}
+.proj-featured + .proj-featured{margin-top:26px}
 
 /* ============ EDUCATION ============ */
 #education{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
@@ -379,7 +388,7 @@ body.anim .rv.in{opacity:1;transform:none}
         <p>B.Tech @ Techno Institute of Engineering and Management, Banipur</p>
         <div class="info-rows">
           <div><b>Degree</b> B.Tech CSE (2027)</div>
-          <div><b>Email</b> tecb.cse27.deep@gmail.com</div>
+          <div><b>Email</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="790d1c1a1b571a0a1c4b4e571d1c1c09391e14181015571a1614">[email&#160;protected]</a></div>
           <div><b>Phone</b> +91 98311 44618</div>
           <div><b>Focus</b> SDE • AI/ML • Data</div>
         </div>
@@ -434,9 +443,40 @@ body.anim .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <span class="eyebrow rv">Projects</span>
     <h2 class="sec-title rv">Featured <span>work</span></h2>
-    <p class="sec-sub rv">A project that combines my backend, data and web skills.</p>
+    <p class="sec-sub rv">Real, deployed applications — not just screenshots. Click <b style="color:#fff">Live Demo</b> and try them yourself! 🚀</p>
+    <div class="demo-note rv">⏳ Hosted on free tier — first load may take ~30 seconds to wake up</div>
     <div class="proj-featured rv">
       <div>
+        <div class="live-dot"><i></i> LIVE DEMO AVAILABLE</div>
+        <div class="proj-tag">★ Full-Stack · Spring Boot</div>
+        <h3>Online Hotel Booking Platform</h3>
+        <p>A complete hotel &amp; resort booking web app — browse stays, check live room availability, book rooms and manage everything from an admin dashboard. Containerized with Docker and deployed on Render.</p>
+        <ul class="proj-list">
+          <li><b style="color:#fff">Customer login</b> with secure accounts &amp; personal booking history</li>
+          <li><b style="color:#fff">Hotel / resort browsing</b> with live room availability checking</li>
+          <li><b style="color:#fff">Booking management</b> — create, view &amp; manage reservations</li>
+          <li><b style="color:#fff">Admin dashboard</b> to manage hotels, rooms &amp; all bookings</li>
+          <li><b style="color:#fff">Simulated payment step</b> — demo checkout flow (no real payments)</li>
+        </ul>
+        <div class="pills" style="margin-bottom:26px"><span>Java 11</span><span>Spring Boot 2.7.18</span><span>JSP</span><span>Spring Data JPA</span><span>H2</span><span>Docker</span><span>Render</span></div>
+        <div class="proj-btns">
+          <a class="btn btn-primary" href="https://online-hotel-simple.onrender.com" target="_blank" rel="noopener">🚀 Live Demo ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/tecbcse27deep-debug" target="_blank" rel="noopener">View Code ↗</a>
+        </div>
+      </div>
+      <div class="proj-visual">
+        <div class="mock">
+          <div class="mock-bar"><i></i><i></i><i></i></div>
+          <div class="mock-body">
+            <div class="sk sk1"></div><div class="sk sk2"></div><div class="sk sk3"></div>
+            <div class="mock-chips"><em>🏨 Hotels</em><em>🛏️ Rooms</em><em>📅 Bookings</em><em>👨‍💼 Admin</em></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="proj-featured rv">
+      <div>
+        <div class="live-dot"><i></i> LIVE DEMO AVAILABLE</div>
         <div class="proj-tag">★ Featured Project</div>
         <h3>Recommendation System for Movies &amp; Music</h3>
         <p>A web-based recommendation system that suggests movies and music based on the user's selected category and mood.</p>
@@ -446,7 +486,10 @@ body.anim .rv.in{opacity:1;transform:none}
           <li>Simple <b style="color:#fff">HTML/CSS interface</b> for selecting preferences &amp; viewing results</li>
         </ul>
         <div class="pills" style="margin-bottom:26px"><span>Python</span><span>Flask</span><span>Pandas</span><span>Scikit-learn</span><span>HTML</span><span>CSS</span></div>
-        <a class="btn btn-primary" href="https://github.com/tecbcse27deep-debug" target="_blank" rel="noopener">View on GitHub ↗</a>
+        <div class="proj-btns">
+          <a class="btn btn-primary" href="https://movie-music-recommender-jme6.onrender.com" target="_blank" rel="noopener">🚀 Live Demo ↗</a>
+          <a class="btn btn-ghost" href="https://github.com/tecbcse27deep-debug" target="_blank" rel="noopener">View on GitHub ↗</a>
+        </div>
       </div>
       <div class="proj-visual">
         <div class="mock">
@@ -558,14 +601,14 @@ body.anim .rv.in{opacity:1;transform:none}
     <div class="contact-grid">
       <div>
         <div class="c-cards rv">
-          <a class="c-card" href="mailto:tecb.cse27.deep@gmail.com"><span class="c-ico">📧</span><div><small>Email</small><b>tecb.cse27.deep@gmail.com</b></div></a>
+          <a class="c-card" href="/cdn-cgi/l/email-protection#6612030504480515035451480203031626010b070f0a4805090b"><span class="c-ico">📧</span><div><small>Email</small><b><span class="__cf_email__" data-cfemail="05716066672b66766037322b61606075456268646c692b666a68">[email&#160;protected]</span></b></div></a>
           <a class="c-card" href="tel:+919831144618"><span class="c-ico">📱</span><div><small>Phone</small><b>+91 98311 44618</b></div></a>
           <div class="c-card"><span class="c-ico">📍</span><div><small>Location</small><b>Bongaon, West Bengal, India</b></div></div>
         </div>
         <div class="socials rv">
           <a href="https://github.com/tecbcse27deep-debug" target="_blank" rel="noopener" title="GitHub">🐙</a>
           <a href="https://linkedin.com/in/deep-biswas-258a2b409" target="_blank" rel="noopener" title="LinkedIn">💼</a>
-          <a href="mailto:tecb.cse27.deep@gmail.com" title="Email">✉️</a>
+          <a href="/cdn-cgi/l/email-protection#9eeafbfdfcb0fdedfbaca9b0fafbfbeedef9f3fff7f2b0fdf1f3" title="Email">✉️</a>
           <a href="tel:+919831144618" title="Phone">📞</a>
         </div>
       </div>
@@ -595,7 +638,7 @@ body.anim .rv.in{opacity:1;transform:none}
 </div>
 
 <!-- CDN libraries (progressive enhancement; site works offline without them too) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
@@ -822,5 +865,5 @@ body.anim .rv.in{opacity:1;transform:none}
   }
 })();
 </script>
-</body>
+<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a41b881d8ca7cb6e',t:'MTc5MDUyMjgzOA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
