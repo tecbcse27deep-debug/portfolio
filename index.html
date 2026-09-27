@@ -388,7 +388,7 @@ body.anim .rv.in{opacity:1;transform:none}
         <p>B.Tech @ Techno Institute of Engineering and Management, Banipur</p>
         <div class="info-rows">
           <div><b>Degree</b> B.Tech CSE (2027)</div>
-          <div><b>Email</b> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0e7a6b6d6c206d7d6b3c39206a6b6b7e4e69636f6762206d6163">[email&#160;protected]</a></div>
+          <div><b>Email</b> <span class="eml"></span></div>
           <div><b>Phone</b> +91 98311 44618</div>
           <div><b>Focus</b> SDE • AI/ML • Data</div>
         </div>
@@ -601,14 +601,14 @@ body.anim .rv.in{opacity:1;transform:none}
     <div class="contact-grid">
       <div>
         <div class="c-cards rv">
-          <a class="c-card" href="/cdn-cgi/l/email-protection#e793828485c9849482d5d0c983828297a7808a868e8bc984888a"><span class="c-ico">📧</span><div><small>Email</small><b><span class="__cf_email__" data-cfemail="2b5f4e48490548584e191c054f4e4e5b6b4c464a424705484446">[email&#160;protected]</span></b></div></a>
+          <a class="c-card" data-eml href="#contact"><span class="c-ico">📧</span><div><small>Email</small><b><span class="eml"></span></b></div></a>
           <a class="c-card" href="tel:+919831144618"><span class="c-ico">📱</span><div><small>Phone</small><b>+91 98311 44618</b></div></a>
           <div class="c-card"><span class="c-ico">📍</span><div><small>Location</small><b>Bongaon, West Bengal, India</b></div></div>
         </div>
         <div class="socials rv">
           <a href="https://github.com/tecbcse27deep-debug" target="_blank" rel="noopener" title="GitHub">🐙</a>
           <a href="https://linkedin.com/in/deep-biswas-258a2b409" target="_blank" rel="noopener" title="LinkedIn">💼</a>
-          <a href="/cdn-cgi/l/email-protection#b2c6d7d1d09cd1c1d780859cd6d7d7c2f2d5dfd3dbde9cd1dddf" title="Email">✉️</a>
+          <a data-eml href="#contact" title="Email">✉️</a>
           <a href="tel:+919831144618" title="Phone">📞</a>
         </div>
       </div>
@@ -638,7 +638,7 @@ body.anim .rv.in{opacity:1;transform:none}
 </div>
 
 <!-- CDN libraries (progressive enhancement; site works offline without them too) -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.158.0/three.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
@@ -647,6 +647,9 @@ body.anim .rv.in{opacity:1;transform:none}
   'use strict';
   document.body.classList.add('anim'); /* enable scroll-reveal only when JS runs */
   var $=function(s){return document.querySelector(s)}, $$=function(s){return document.querySelectorAll(s)};
+  var EU='tecb.cse27.deep',ED='gmail.com',EM=EU+'@'+ED; /* assembled in JS so network filters can't break it */
+  $$('.eml').forEach(function(el){el.textContent=EM});
+  $$('a[data-eml]').forEach(function(a){a.setAttribute('href','mailto:'+EM)});
 
   /* Preloader */
   function hideLoader(){document.getElementById('loader').classList.add('hide')}
@@ -724,7 +727,7 @@ body.anim .rv.in{opacity:1;transform:none}
         em=document.getElementById('fEmail').value.trim(),
         s=document.getElementById('fSub').value.trim(),
         m=document.getElementById('fMsg').value.trim();
-    window.location.href='mailto:tecb.cse27.deep@gmail.com?subject='+encodeURIComponent(s+' — from '+n)+
+    window.location.href='mailto:'+EM+'?subject='+encodeURIComponent(s+' — from '+n)+
       '&body='+encodeURIComponent(m+'\n\n— '+n+' ('+em+')');
   });
 
