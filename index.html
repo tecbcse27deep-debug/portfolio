@@ -415,26 +415,20 @@ body.anim .rv.in{opacity:1;transform:none}
   <div class="wrap">
     <span class="eyebrow rv">Technical Skills</span>
     <h2 class="sec-title rv">My <span>tech toolbox</span></h2>
-    <p class="sec-sub rv">Languages, frameworks, AI libraries and tools I work with.</p>
-    <div class="bars rv">
-      <div><div class="bar-top"><b>🐍 Python</b><span>90%</span></div><div class="bar"><i style="--w:90%"></i></div></div>
-      <div><div class="bar-top"><b>☕ Java</b><span>80%</span></div><div class="bar"><i style="--w:80%"></i></div></div>
-      <div><div class="bar-top"><b>🧠 AI / ML &amp; Data</b><span>82%</span></div><div class="bar"><i style="--w:82%"></i></div></div>
-      <div><div class="bar-top"><b>🌐 Web &amp; Backend</b><span>85%</span></div><div class="bar"><i style="--w:85%"></i></div></div>
-    </div>
+    <p class="sec-sub rv">Core computer science fundamentals — languages, databases, web tools and systems.</p>
     <div class="skills-grid">
-      <div class="skill-card rv"><div class="skill-icon">💻</div><h3>Programming</h3>
-        <div class="pills"><span>Python</span><span>Java</span><span>C</span><span>C++</span><span>SQL</span></div></div>
-      <div class="skill-card rv"><div class="skill-icon">🌐</div><h3>Web &amp; Backend</h3>
-        <div class="pills"><span>HTML</span><span>CSS</span><span>Flask</span><span>Spring</span><span>Spring Boot</span></div></div>
-      <div class="skill-card rv"><div class="skill-icon">🧠</div><h3>AI &amp; Data</h3>
-        <div class="pills"><span>Machine Learning</span><span>Data Analytics</span><span>Recommendation Systems</span><span>Generative AI</span></div></div>
-      <div class="skill-card rv"><div class="skill-icon">🧰</div><h3>Libraries &amp; Tools</h3>
-        <div class="pills"><span>Pandas</span><span>Scikit-learn</span><span>XGBoost</span><span>SHAP</span><span>Git</span><span>GitHub</span><span>VS Code</span><span>Spring Tool Suite</span></div></div>
+      <div class="skill-card rv"><div class="skill-icon">💻</div><h3>Languages</h3>
+        <div class="pills"><span>C</span><span>Java (J2SE)</span><span>Java (J2EE)</span><span>Python (Basic)</span></div></div>
       <div class="skill-card rv"><div class="skill-icon">🗄️</div><h3>Database</h3>
-        <div class="pills"><span>MySQL</span><span>Relational DB Concepts</span></div></div>
-      <div class="skill-card rv"><div class="skill-icon">📚</div><h3>Coursework</h3>
-        <div class="pills"><span>OOP</span><span>DSA</span><span>DBMS</span><span>ML</span><span>Data Analytics</span><span>Web Dev</span><span>Numerical Computation</span><span>Computer Networks</span><span>Multimedia Systems</span></div></div>
+        <div class="pills"><span>Oracle</span><span>SQL</span></div></div>
+      <div class="skill-card rv"><div class="skill-icon">🌐</div><h3>Web Tools</h3>
+        <div class="pills"><span>HTML</span><span>CSS</span></div></div>
+      <div class="skill-card rv"><div class="skill-icon">📊</div><h3>Office Package</h3>
+        <div class="pills"><span>MS-Word</span><span>MS-Excel</span><span>MS-PowerPoint</span></div></div>
+      <div class="skill-card rv"><div class="skill-icon">🖥️</div><h3>Operating Systems</h3>
+        <div class="pills"><span>Windows</span><span>DOS</span></div></div>
+      <div class="skill-card rv"><div class="skill-icon">📚</div><h3>Subject Interest</h3>
+        <div class="pills"><span>DBMS</span><span>Data Structures</span><span>Operating Systems</span></div></div>
     </div>
   </div>
 </section>
@@ -745,7 +739,7 @@ body.anim .rv.in{opacity:1;transform:none}
   document.getElementById('year').textContent=new Date().getFullYear();
 
   /* Marquee */
-  var skills=['Python','Java','C','C++','SQL','HTML','CSS','Flask','Spring Boot','Machine Learning','Data Analytics','Pandas','Scikit-learn','XGBoost','MySQL','Git & GitHub'];
+  var skills=['C','Java (J2SE)','Java (J2EE)','Python (Basic)','Oracle','SQL','HTML','CSS','MS-Word','MS-Excel','MS-PowerPoint','Windows','DOS','DBMS','Data Structures','Operating Systems'];
   var half=skills.map(function(s){return s+' <b>✦</b>'}).join(' ');
   document.getElementById('marquee').innerHTML=half+half;
 
@@ -953,5 +947,5 @@ body.anim .rv.in{opacity:1;transform:none}
   }
 })();
 </script>
-<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a53b47de5b4cdab3',t:'MTc5MzU0MDEwNQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a53b47de5b4cdab3',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</body>
 </html>
